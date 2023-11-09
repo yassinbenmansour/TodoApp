@@ -23,5 +23,15 @@ class TodoController extends Controller
         return redirect('/');
     }
 
+    public function update(Todo $todo){
+        $todo->update(['isDone' => true]);
+        return redirect('/');
+
+    }
+
+    public function delete(Todo $todo){
+        $todo->delete();
+        return redirect('/');
+    }
 
 }
